@@ -30,11 +30,13 @@ input[type=submit]:hover {
 .grid1{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas: 
-	"top"
-	"form"
-	"sluit";
+	"ehader"
+	"search"
+	"main"
+	"main2"
+	"footer";
 	height: 100%;
 	width: 100%;
 }

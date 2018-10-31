@@ -1,5 +1,10 @@
 <?php 
-	include './functions/db_functions.php';
+	//include './functions/db_functions.php';
+	include 'functions/dbh.php';
+	$conn = new Dbh;
+	$conn->connect();
+	//include './functions/user.inc.php';
+	//include './functions/viewuser.inc.php';
 	include './functions/product_queries.php';
 	include './functions/helpers.php';
 
@@ -19,8 +24,10 @@
 	<title>
 		Plugin Market
 	</title>
+<link rel="stylesheet" type="" href="css/style.css">
 </head>
 <body>
+
 <header> 
 		<a href="/">
 			<div class="logo">plugin market</div>
