@@ -1,4 +1,10 @@
 <?php 
+	include 'functions/dbh.php';
+	include './functions/product_queries.php';
+	include './functions/user_queries.php';
+	$conn = new Dbh;
+	$conn->connect();
+
 	session_start();
 	if (empty($_SESSION['user_id'])){
 		 header('Location: ./logout.php');

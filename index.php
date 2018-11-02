@@ -1,6 +1,7 @@
 <?php 
 	//include './functions/db_functions.php';
 	include 'functions/dbh.php';
+	
 	$conn = new Dbh;
 	$conn->connect();
 	//include './functions/user.inc.php';

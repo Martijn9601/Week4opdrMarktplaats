@@ -1,13 +1,30 @@
 <?php 
 
 	include './functions/helpers.php';
-	//include './functions/db_functions.php';
+	// include './functions/db_functions.php';
 	include './functions/dbh.php';
 	include './functions/product_queries.php';
-	include './functions/user_queries.php';
+	include './functions/user.php';
+	$dbh = new Dbh;
+	$conn = $dbh->connect();
+	// $firstname = null;
+	// $lastname = null;
+	// $dateofbirth = null;
+	// $email = null;
+	// $password = null;
 
+
+
+	// $user->register_user();
+	
 	if(isset($_POST['submit'])){
-		register_user($_POST);
+		$firstname = $_POST['firstname'];
+		$lastname = $_POST['lastname'];
+		$dateofbirth = $_POST['dateofbirth'];
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+			$user = new User($firstname, $lastname, $dateofbirth, $email, $password, $conn);
+		$user->register();
 	}
 
 ?>

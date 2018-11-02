@@ -1,8 +1,8 @@
 <?php 
 
-class User extends Dbh{
+class ser extends Dbh{
 
-	public function getAllUsers(){
+	protected function getAllUsers(){
 		$sql = "SELECT * FROM user";
 		$result = $this->connect()->query($sql);
 		$numRows = $result->num_rows;

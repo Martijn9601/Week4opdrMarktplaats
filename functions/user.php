@@ -1,6 +1,6 @@
 <?php 
 
-class RegisterUser{
+class User{
 
 	private $firstname;
 	private $lastname;
